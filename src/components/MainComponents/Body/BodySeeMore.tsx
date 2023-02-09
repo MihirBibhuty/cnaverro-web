@@ -1,12 +1,15 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { createStyles, Button } from '@mantine/core';
+import { createStyles, Button, NativeSelect } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
     container: {
         margin: '-10% 4rem',
         marginBottom: '1rem',
+    },
+
+    sortIcon: {
+        width: '8rem',
     },
 
     wrapper: {
@@ -35,7 +38,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 
-export default function Body() {
+export default function BodySeeMore() {
     const { classes, theme } = useStyles();
 
     return (
@@ -64,20 +67,19 @@ export default function Body() {
 
             </div>
 
-            <Link href='/MainPage/MainSeeMore' style={{ textDecoration: 'none' }}>
-                <Button
-                    variant="gradient" gradient={{ from: 'rgba(6, 6, 6, 0.32)', to: 'rgba(18, 15, 15, 0.6)' }}
-                    rightIcon={<IconChevronRight size={18} />}
-                    style={{ display: 'block', margin: '3rem auto' }}
-                    sx={(theme) => ({
-                        fontSize: '1.2rem',
-                        borderRadius: '20px',
-                        boxShadow: '0px 4px 5px rgba(0, 0, 0, 0.25)'
-                    })}
-                >
-                    See more
-                </Button>
-            </Link>
+            {/* <div className={classes.wrapper}>
+                <div className={classes.boxRect}></div>
+                <div className={classes.boxSq}></div>
+                <div className={classes.boxSq}></div>
+                <div className={classes.boxSq}></div>
+            </div>
+
+            <div className={classes.wrapper}>
+                <div className={classes.boxRect}></div>
+                <div className={classes.boxRect}></div>
+                <div className={classes.boxRect}></div>
+                <div className={classes.boxRect}></div>
+            </div> */}
         </div>
     )
 }

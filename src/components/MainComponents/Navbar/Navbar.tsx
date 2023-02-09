@@ -1,11 +1,17 @@
 import { Avatar, Indicator, createStyles, Header, HoverCard, Group, Button, UnstyledButton, Text, SimpleGrid, ThemeIcon, Anchor, Divider, Center, Box, Burger, Drawer, Collapse, ScrollArea, } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconPlus, IconBell, IconCode, IconBook, IconChartPie3, IconFingerprint, IconCoin, IconChevronDown } from '@tabler/icons';
+import { IconPlus, IconBell } from '@tabler/icons';
 
 import Image from 'next/image';
 
 
 const useStyles = createStyles((theme) => ({
+    nav: {
+        position: 'fixed',
+        borderColor: '#222222',
+        boxShadow: '0px 8px 8px rgba(0, 0, 0, 0.25)'
+    },
+
     link: {
         display: 'flex',
         alignItems: 'center',
@@ -29,27 +35,6 @@ const useStyles = createStyles((theme) => ({
         }),
     },
 
-    subLink: {
-        width: '100%',
-        padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
-        borderRadius: theme.radius.md,
-
-        ...theme.fn.hover({
-            backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
-        }),
-
-        '&:active': theme.activeStyles,
-    },
-
-    dropdownFooter: {
-        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
-        margin: -theme.spacing.md,
-        marginTop: theme.spacing.sm,
-        padding: `${theme.spacing.md}px ${theme.spacing.md * 2}px`,
-        paddingBottom: theme.spacing.xl,
-        borderTop: `1px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
-            }`,
-    },
 
     hiddenMobile: {
         [theme.fn.smallerThan('sm')]: {
@@ -67,17 +52,16 @@ const useStyles = createStyles((theme) => ({
 
 export default function Navbar() {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-    const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
+    // const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
     const { classes, theme } = useStyles();
 
 
-
     return (
-        <Box pb={0}>
-            <Header height={60} px="md" bg={'linear-gradient(91deg, #222222 37.92%, #423f3f 89.07%, #1E1E1E 99.47%)'}>
+        <Box>
+            <Header className={classes.nav} height={60} px="md" bg={'linear-gradient(91deg, #222222 37.92%, #2F2D2D 89.07%, #1E1E1E 99.47%)'}>
                 <Group position="apart" sx={{ height: '100%' }}>
 
-                    <Image src="/assets/CanverroLogo.svg" alt="Canverro Logo" width={140} height={60} />
+                    <Image src="/assets/CanverroLogo.svg" alt="Canverro Logo" width={200} height={45} />
 
                     <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
                         <a href="#" className={classes.link}>
@@ -108,8 +92,8 @@ export default function Navbar() {
                         >
                             Create
                         </Button>
-                        <Indicator color={'#EB5757'} dot inline offset={2}><IconBell size={30} color={'#fff'} /></Indicator>
-                        <Avatar src="assets/ProfileIcon.svg" alt="it's me" />
+                        <Indicator color={'#EB5757'} dot inline offset={4}><IconBell size={30} color={'#fff'} /></Indicator>
+                        <Avatar src='/assets/ProfileIcon.svg' alt="it's me" />
                     </Group>
 
                     <Burger color='#fff' opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />

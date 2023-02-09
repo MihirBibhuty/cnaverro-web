@@ -1,6 +1,5 @@
 import { Avatar, Indicator, createStyles, Header, HoverCard, Group, Button, UnstyledButton, Text, SimpleGrid, ThemeIcon, Anchor, Divider, Center, Box, Burger, Drawer, Collapse, ScrollArea, } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconPlus, IconBell, IconCode, IconBook, IconChartPie3, IconFingerprint, IconCoin, IconChevronDown } from '@tabler/icons';
 
 import Image from 'next/image';
 
@@ -55,7 +54,6 @@ const useStyles = createStyles((theme) => ({
             display: 'none',
         },
     },
-
     hiddenDesktop: {
         [theme.fn.largerThan('lg')]: {
             display: 'none',
@@ -69,39 +67,37 @@ export default function Navbar() {
     const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
     const { classes, theme } = useStyles();
     return (
-        <Box pb={0}>
-            <Header height={60} px="md" bg={'linear-gradient(91deg, #222222 37.92%, #423f3f 89.07%, #1E1E1E 99.47%)'}>
+        <Box >
+            <Header style={{ position: "fixed", width: "100%" }} height={60} px="md" bg={'linear-gradient(91deg, #222222 37.92%, #423f3f 89.07%, #1E1E1E 99.47%)'}>
                 <Group position="apart" sx={{ height: '100%' }}>
 
                     <Image src="/assets/CanverroLogo.svg" alt="Canverro Logo" width={140} height={60} />
 
                     <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
-                       
+
                     </Group>
+
                     <Group className={classes.hiddenMobile}>
                         <Button
-                            
+
                             sx={(theme) => ({
                                 fontSize: '1rem',
                                 backgroundColor: 'transparent',
                                 border: '1px solid #fff',
-                                
+
                                 '&:hover': {
                                     backgroundColor: '#000'
                                 },
                             })}
                         >
-                             Log in
+                            Log in
                         </Button>
-                        
+
                     </Group>
 
                     <Burger color='#fff' opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
                 </Group>
             </Header>
-
-
-           
         </Box >
     );
 }
