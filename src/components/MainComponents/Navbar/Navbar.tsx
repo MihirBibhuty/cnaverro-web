@@ -47,14 +47,16 @@ const useStyles = createStyles((theme) => ({
             display: 'none',
         },
     },
+
+    drawer: {
+        background: 'linear-gradient(91deg, #222222 37.92%, #2F2D2D 89.07%, #1E1E1E 99.47%)',
+    }
 }));
 
 
 export default function Navbar() {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-    // const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
     const { classes, theme } = useStyles();
-
 
     return (
         <Box>
@@ -106,8 +108,8 @@ export default function Navbar() {
                 onClose={closeDrawer}
                 size="100%"
                 padding="md"
-                title="Navigation"
-                className={classes.hiddenDesktop}
+                title={<Image src="/assets/CanverroLogo.svg" alt="Canverro Logo" width={150} height={45} />}
+                className={`${classes.hiddenDesktop} ${classes.drawer}`}
                 zIndex={1000000}
             >
                 <ScrollArea sx={{ height: 'calc(100vh - 60px)' }} mx="-md">
@@ -117,17 +119,35 @@ export default function Navbar() {
                         Home
                     </a>
                     <a href="#" className={classes.link}>
-                        Learn
+                        Shop
                     </a>
                     <a href="#" className={classes.link}>
-                        Academy
+                        Chat
                     </a>
 
                     <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
 
                     <Group position="center" grow pb="xl" px="md">
-                        <Button>Sign up</Button>
+                        <Button
+                            rightIcon={<IconPlus size={20} style={{ background: '#000', border: '1px solid #fff', borderRadius: '50px' }} />}
+                            sx={(theme) => ({
+                                fontSize: '1rem',
+                                backgroundColor: 'transparent',
+                                border: '1px solid #fff',
+                                borderRadius: '15px',
+                                '&:hover': {
+                                    backgroundColor: '#000'
+                                },
+                            })}
+                        >
+                            Create
+                        </Button>
                     </Group>
+
+                    <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+                        <Indicator color={'#EB5757'} dot inline offset={4}><IconBell size={35} color={'#fff'} /></Indicator>
+                        <Avatar src='/assets/ProfileIcon.svg' alt="it's me" />
+                    </div>
                 </ScrollArea>
             </Drawer>
         </Box >

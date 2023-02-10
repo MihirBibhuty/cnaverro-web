@@ -15,28 +15,50 @@ const useStyles = createStyles((theme) => ({
         paddingBottom: '2rem',
         borderBottom: '2px solid #222222',
         borderColor: '#222222',
-
         // borderBottomLeftRadius: '50%',
         // borderBottomRightRadius: '50%',
     },
+
     input: {
         width: '40%',
         margin: 'auto',
         marginBottom: '1.5rem',
+
+        [theme.fn.smallerThan('sm')]: {
+            width: '80%',
+        },
     },
+
     divider: {
         marginTop: '1rem'
     },
+
+    imgWrap: {
+        width: '100%',
+        height: '100%',
+        padding: '4px',
+        background: 'linear-gradient(#2E9A39 0%, #00F0FF 96.88%, #029aa3 100%)',
+        borderRadius: '15px',
+
+        [theme.fn.smallerThan('sm')]: {
+            width: '80%',
+            margin: 'auto',
+        },
+    },
+
     box: {
-        width: '10rem',
-    }
+        width: '100%',
+        height: '100%',
+        background: '#D9D9D9',
+        borderRadius: '15px',
+    },
 }));
 
 export default function Hero() {
     const { classes, theme } = useStyles();
 
     return (
-        <>
+        <div>
             <Box pt={80} className={classes.container}>
                 <Input icon={<IconSearch />} className={classes.input} radius={'lg'} />
                 <Carousel
@@ -50,21 +72,28 @@ export default function Hero() {
                     loop
                     align="start"
                 >
-                    <Carousel.Slide className={classes.box}><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
+                    <Carousel.Slide><div className={classes.imgWrap}><div className={classes.box}></div></div></Carousel.Slide>
+                    <Carousel.Slide><div className={classes.imgWrap}><div className={classes.box}></div></div></Carousel.Slide>
+                    <Carousel.Slide><div className={classes.imgWrap}><div className={classes.box}></div></div></Carousel.Slide>
+                    <Carousel.Slide><div className={classes.imgWrap}><div className={classes.box}></div></div></Carousel.Slide>
+                    <Carousel.Slide><div className={classes.imgWrap}><div className={classes.box}></div></div></Carousel.Slide>
+                    <Carousel.Slide><div className={classes.imgWrap}><div className={classes.box}></div></div></Carousel.Slide>
+                    <Carousel.Slide><div className={classes.imgWrap}><div className={classes.box}></div></div></Carousel.Slide>
+                    <Carousel.Slide><div className={classes.imgWrap}><div className={classes.box}></div></div></Carousel.Slide>
+                    {/* <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
+                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
+                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
+                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
+                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
+                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
+                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
+                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide> */}
                 </Carousel>
 
                 <Divider size="sm" className={classes.divider} />
             </Box>
 
             <img src='/assets/Curve.png' alt="curve" width='100%' />
-        </>
+        </div>
     );
 }

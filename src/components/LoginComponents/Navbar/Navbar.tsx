@@ -64,8 +64,8 @@ const useStyles = createStyles((theme) => ({
 
 export default function Navbar() {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-    const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
     const { classes, theme } = useStyles();
+
     return (
         <Box >
             <Header style={{ position: "fixed", width: "100%" }} height={60} px="md" bg={'linear-gradient(91deg, #222222 37.92%, #423f3f 89.07%, #1E1E1E 99.47%)'}>
@@ -79,12 +79,10 @@ export default function Navbar() {
 
                     <Group className={classes.hiddenMobile}>
                         <Button
-
                             sx={(theme) => ({
                                 fontSize: '1rem',
                                 backgroundColor: 'transparent',
                                 border: '1px solid #fff',
-
                                 '&:hover': {
                                     backgroundColor: '#000'
                                 },
@@ -95,7 +93,19 @@ export default function Navbar() {
 
                     </Group>
 
-                    <Burger color='#fff' opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+                    <Button
+                        className={classes.hiddenDesktop}
+                        sx={(theme) => ({
+                            fontSize: '1rem',
+                            backgroundColor: 'transparent',
+                            border: '1px solid #fff',
+                            '&:hover': {
+                                backgroundColor: '#000'
+                            },
+                        })}
+                    >
+                        Log in
+                    </Button>
                 </Group>
             </Header>
         </Box >

@@ -6,12 +6,12 @@ import { IconBrandGoogle } from '@tabler/icons';
 
 export default function Body() {
     return (
-        <div >
+        <div>
 
             <div style={{ backgroundImage: "url('/assets/LoginBackground.png')", height: "100vh", width: "100vw", backgroundSize: "cover", filter: "blur(8px)", WebkitFilter: "blur(8px)" }} >
             </div>
             <div style={{ height: "100vh", width: "100vw", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", zIndex: "10" }} >
-                <div style={{ backgroundColor: 'white', padding: "5rem 0", borderBottomLeftRadius: "50%", borderBottomRightRadius: "50%" }}>
+                <div style={{ backgroundColor: 'white', padding: "5rem 0", borderBottomLeftRadius: "35%", borderBottomRightRadius: "35%" }}>
                     <Text style={{ fontSize: "4rem", color: "#000" }}>
                         <center> Wear Your Style.<p style={{ fontSize: "2rem" }}>The easiest way to customize<br /> your merchandise.</p></center>
                     </Text>

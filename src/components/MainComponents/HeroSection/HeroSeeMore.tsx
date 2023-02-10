@@ -18,32 +18,49 @@ const useStyles = createStyles((theme) => ({
         // borderBottomLeftRadius: '50%',
         // borderBottomRightRadius: '50%',
     },
+
     input: {
         width: '40%',
         margin: 'auto',
         marginBottom: '1.5rem',
+
+        [theme.fn.smallerThan('sm')]: {
+            width: '80%',
+        },
     },
+
     divider: {
         marginTop: '1rem'
     },
-    box: {
-        width: '10rem',
-    },
 
     img: {
+        objectFit: 'contain',
+        display: 'block',
         position: 'absolute',
         filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+
+        [theme.fn.smallerThan('sm')]: {
+            height: '100%',
+            width: '90%',
+            margin: 'auto',
+        },
     },
+
     img2: {
         left: '1.2rem',
     },
+
     img3: {
         left: '2.4rem',
     },
 
     sortIcon: {
         width: '7rem',
-        // border: '2px solid #000',
+
+        [theme.fn.smallerThan('sm')]: {
+            width: '80%',
+            margin: '1rem auto 0 auto'
+        },
     },
 }));
 
@@ -65,15 +82,15 @@ export default function HeroSeeMore() {
                     loop
                     align="start"
                 >
-                    <Carousel.Slide className={classes.box}><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
-                    <Carousel.Slide className={classes.box}><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
+                    <Carousel.Slide><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
+                    <Carousel.Slide><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
+                    <Carousel.Slide><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
+                    <Carousel.Slide><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
+                    <Carousel.Slide><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
+                    <Carousel.Slide><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
+                    <Carousel.Slide><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
+                    <Carousel.Slide><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
+                    <Carousel.Slide><img className={classes.img} src='/assets/CollectionImage2.png' /><img className={`${classes.img} ${classes.img2}`} src='/assets/CollectionImage3.png' /><img className={`${classes.img} ${classes.img3}`} src='/assets/CollectionImage1.png' /></Carousel.Slide>
                 </Carousel>
 
                 <Divider size="sm" className={classes.divider} />
