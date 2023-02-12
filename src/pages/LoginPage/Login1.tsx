@@ -25,7 +25,7 @@ export default function Login1() {
             <div style={{ backgroundImage: "linear-gradient(175.17deg, #0E0F11 -43.36%, rgba(29, 32, 50, 0) 156.23%), url('/assets/LoginBackground.png')", backgroundColor: "#222222", height: "100vh", width: "100vw", backgroundSize: "contain", filter: "blur(2px)", WebkitFilter: "blur(2px)" }}>
             </div>
             <div style={{ height: "100vh", width: "100vw", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", zIndex: "10" }} >
-                <div style={{ backgroundColor: '#222222', padding: "6rem 0", borderBottomLeftRadius: "50%", borderBottomRightRadius: "50%", borderBottom: '4px solid #fff', textAlign: 'center' }}>
+                <div style={{ background: 'linear-gradient(90.66deg, #222222 37.9%, #2F2D2D 76.05%, #1E1E1E 83.81%)', boxShadow: 'linear-gradient(90.66deg, #222222 37.9%, #2F2D2D 76.05%, #1E1E1E 83.81%);', padding: "6rem 0", borderBottomLeftRadius: "50%", borderBottomRightRadius: "50%", borderBottom: '4px solid #fff', textAlign: 'center' }}>
                     <Image className={classes.hiddenMobile} src="/assets/CanverroLogo.svg" alt="Canverro Logo" width={800} height={80} />
                     <img className={classes.hiddenDesktop} src="/assets/CanverroLogo.svg" alt="Canverro Logo" />
                 </div>
