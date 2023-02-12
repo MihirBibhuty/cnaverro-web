@@ -1,4 +1,4 @@
-import { Avatar, Indicator, createStyles, Header, HoverCard, Group, Button, UnstyledButton, Text, SimpleGrid, ThemeIcon, Anchor, Divider, Center, Box, Burger, Drawer, Collapse, ScrollArea, } from '@mantine/core';
+import { Avatar, Indicator, createStyles, Header, Group, Button, Divider, Box, Burger, Drawer, ScrollArea, } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconPlus, IconBell } from '@tabler/icons';
 

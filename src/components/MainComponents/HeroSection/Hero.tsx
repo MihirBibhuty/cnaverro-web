@@ -1,11 +1,6 @@
-import Image from 'next/image';
-import styles from './Body.module.scss';
-
 import { createStyles, Box, Input, Divider } from '@mantine/core';
 import { IconSearch } from '@tabler/icons';
-import { Carousel, Embla } from '@mantine/carousel';
-
-// import Curve from '/assets/Curve.png';
+import { Carousel } from '@mantine/carousel';
 
 
 const useStyles = createStyles((theme) => ({
@@ -15,8 +10,6 @@ const useStyles = createStyles((theme) => ({
         paddingBottom: '2rem',
         borderBottom: '2px solid #222222',
         borderColor: '#222222',
-        // borderBottomLeftRadius: '50%',
-        // borderBottomRightRadius: '50%',
     },
 
     input: {
@@ -80,14 +73,6 @@ export default function Hero() {
                     <Carousel.Slide><div className={classes.imgWrap}><div className={classes.box}></div></div></Carousel.Slide>
                     <Carousel.Slide><div className={classes.imgWrap}><div className={classes.box}></div></div></Carousel.Slide>
                     <Carousel.Slide><div className={classes.imgWrap}><div className={classes.box}></div></div></Carousel.Slide>
-                    {/* <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide>
-                    <Carousel.Slide><Image src='/assets/Rect.png' alt='img' width={200} height={200} /></Carousel.Slide> */}
                 </Carousel>
 
                 <Divider size="sm" className={classes.divider} />

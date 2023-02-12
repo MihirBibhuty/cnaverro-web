@@ -1,11 +1,6 @@
-import Image from 'next/image';
-import styles from './Body.module.scss';
-
 import { createStyles, Box, Input, Divider, NativeSelect } from '@mantine/core';
-import { IconSearch, IconChevronDown } from '@tabler/icons';
-import { Carousel, Embla } from '@mantine/carousel';
-
-// import Curve from '/assets/Curve.png';
+import { IconSearch } from '@tabler/icons';
+import { Carousel } from '@mantine/carousel';
 
 
 const useStyles = createStyles((theme) => ({
@@ -15,8 +10,6 @@ const useStyles = createStyles((theme) => ({
         paddingBottom: '2rem',
         borderBottom: '2px solid #222222',
         borderColor: '#222222',
-        // borderBottomLeftRadius: '50%',
-        // borderBottomRightRadius: '50%',
     },
 
     input: {
@@ -103,8 +96,6 @@ export default function HeroSeeMore() {
                     ml={'4rem'}
                     variant='filled'
                     radius={'lg'}
-                // rightSection={<IconChevronDown size={14} />}
-                // rightSectionWidth={40}
                 />
             </Box>
 
